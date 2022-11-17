@@ -1,0 +1,76 @@
+﻿@model Ficha
+@{
+    ViewData["Title"] = "Editarficha";
+}
+
+<h1>Editar ficha</h1>
+
+<body>
+    <div class="card">
+        <div clas="card-body">
+
+            <form asp-action="Editarficha" asp-controller="Home" method="post">
+                <input asp-for="Idficha" type="hidden" class="form-control">
+                <div class="form-floating mb-3">
+
+                    <input asp-for="nombreficha" type="text" class="form-control" placeholder="Nombres">
+                    <label for="floatingInput">Nombre </label>
+                    <span asp-validation-for="nombreficha" class="text-danger"></span>
+
+                </div>
+                <div class="form-floating">
+                    <input asp-for="apellido" type="text" class="form-control" placeholder="apellidos">
+                    <label for="floatingPassword">Apellido</label>
+                    <span asp-validation-for="apellido" class="text-danger"></span>
+                </div>
+
+                <br />
+
+                <div class="form-floating mb-3">
+                    <input asp-for="nacimiento" type="date" class="form-control" placeholder="nacimiento">
+                    <label for="floatingInput">Fecha nacimiento</label>
+                    <span asp-validation-for="nacimiento" class="text-danger"></span>
+                </div>
+                <div class="form-floating mb-3">
+                    <input asp-for="edad" type="text" class="form-control" placeholder="edad">
+                    <label for="floatingInput">Edad</label>
+                    <span asp-validation-for="edad" class="text-danger"></span>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <input asp-for="dpi" type="text" class="form-control" placeholder="dpi">
+                    <label for="floatingInput">DPI</label>
+                    <span asp-validation-for="dpi" class="text-danger"></span>
+                </div>
+
+                <div class="form-floating mb-3">
+                    <input asp-for="direccion" type="text" class="form-control" placeholder="direccion">
+                    <label for="floatingInput">Direccion</label>
+                    <span asp-validation-for="direccion" class="text-danger"></span>
+                </div>
+                <div class="form-floating mb-3">
+                    <input asp-for="genero" type="text" class="form-control" placeholder="genero">
+                    <label for="floatingInput">Genero</label>
+                    <span asp-validation-for="genero" class="text-danger"></span>
+                </div>
+                <div class="form-floating mb-3">
+                    <input asp-for="doctora" type="text" class="form-control" placeholder="doctora">
+                    <label for="floatingInput">Doctora</label>
+                    <span asp-validation-for="doctora" class="text-danger"></span>
+                </div>
+
+                <div class="form-floating">
+                    <textarea asp-for="tratamiento" class="form-control" placeholder="Leave a comment here" style="height: 100px"></textarea>
+                    <label for="floatingTextarea2">Tratamiento</label>
+                    <span asp-validation-for="tratamiento" class="text-danger"></span>
+                </div>
+
+                <br />
+
+                <button type="submit" class="btn btn-primary">Actualizar</button>
+                <a asp-action="ficha" asp-controller="Home" class="btn btn-warning"> volver a la lista</a>
+            </form>
+
+        </div>
+    </div>
+</body>

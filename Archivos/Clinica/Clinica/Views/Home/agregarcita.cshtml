@@ -1,0 +1,51 @@
+﻿@model List<AsignarCitas>
+@{
+    ViewData["Title"] = "Agregar Cita";
+}
+
+<h1>Agregar Cita </h1>
+<body>
+    <div class="card">
+        <div clas="card-body">
+            <a asp-action="Guardar" asp-controller="Home" class="btn btn-success"> <i class="bi bi-plus-circle-fill"></i> Crear un Nuevo</a>
+            <hr />
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Teléfono</th>
+                        <th>Correo</th>
+                        <th>Fecha</th>
+                        <th>Hora</th>
+                        <th>Comentario</th>
+                        <th> </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+
+
+                        <tr>
+                            <td>@item.nombre</td>
+                            <td>@item.telefono</td>
+                            <td>@item.correo</td>
+                            <td>@item.fecha</td>
+                            <td>@item.hora</td>
+                            <td>@item.comentario</td>
+                            <td> <a asp-action="Editar" asp-controller="Home" class="btn btn-primary btn-sm" asp-route-Idcitas="@item.Idcitas"><i class="bi bi-pencil-square"></i> Editar </a> </td>
+                            <td> <a asp-action="Eliminar" asp-controller="Home" class="btn btn-danger btn-sm" asp-route-Idcitas="@item.Idcitas"> <i class="bi bi-trash3-fill"></i>Eliminar </a> </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+

@@ -1,0 +1,64 @@
+﻿@model List<Inventario>
+
+@{
+    ViewData["Title"] = "Inventario";
+}
+
+
+
+<h1>Inventario</h1>
+
+
+<body>
+    <div class="card">
+        <div clas="card-body">
+            <a asp-action="Guardarinventario" asp-controller="Home" class="btn btn-success"> <i class="bi bi-plus-circle-fill"></i> Crear un Nuevo</a>
+
+
+
+
+
+            <hr />
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Precio Unitario</th>
+                        <th>Fecha Ingreso</th>
+                        <th>Precio Total</th>
+                        <th>Codigo Producto</th>
+                        <th>Cantidad</th>
+                        <th> </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+
+
+                        <tr>
+                            <td>@item.descripcion</td>
+                            <td>@item.unitario</td>
+                            <td>@item.ingreso</td>
+                            <td>@item.precio</td>
+                            <td>@item.codigo</td>
+                            <td>@item.cantidad</td>
+                            <td> <a asp-action="Editarinventario" asp-controller="Home" class="btn btn-primary btn-sm" asp-route-Idinventario="@item.Idinventario"><i class="bi bi-pencil-square"></i> Editar </a> </td>
+                            <td> <a asp-action="Eliminarinventario" asp-controller="Home" class="btn btn-danger btn-sm" asp-route-Idinventario="@item.Idinventario"> <i class="bi bi-trash3-fill"></i>Eliminar </a> </td>
+                        </tr>
+                    }
+
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+</body>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />

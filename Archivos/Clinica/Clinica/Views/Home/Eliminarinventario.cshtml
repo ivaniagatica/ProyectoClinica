@@ -1,0 +1,38 @@
+﻿@model Inventario
+@{
+    ViewData["Title"] = "Eliminarinventario";
+}
+
+<h1>Eliminar Inventario</h1>
+
+<body>
+    <div class="card">
+        <div clas="card-body">
+
+            <form asp-action="Eliminarinventario" asp-controller="Home" method="post">
+                <input asp-for="Idinventario" type="hidden" class="form-control">
+                <div class="alert alert-danger" role="alert">
+                    ¿Desea eliminar el producto:@Html.DisplayTextFor(m=>m.descripcion)?
+                </div>
+                <button type="submit" class="btn btn-danger">Eliminar</button>
+                <a asp-action="inventario" asp-controller="Home" class="btn btn-warning"> volver a la lista</a>
+            </form>
+
+        </div>
+    </div>
+
+
+    <br />
+
+
+    <br />
+    <br />
+    <br />
+    <br />
+</body>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />

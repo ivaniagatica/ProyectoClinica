@@ -1,0 +1,38 @@
+﻿@model AsignarCitas
+@{
+    ViewData["Title"] = "Eliminar";
+}
+
+<h1>Eliminar Cita</h1>
+
+<body>
+    <div class="card">
+        <div clas="card-body">
+
+            <form asp-action="Eliminar" asp-controller="Home" method="post">
+                <input asp-for="Idcitas" type="hidden" class="form-control">
+                <div class="alert alert-danger" role="alert">
+                    ¿Desea eliminar el contacto:@Html.DisplayTextFor(m=>m.nombre)?
+                </div>
+                <button type="submit" class="btn btn-danger">Eliminar</button>
+                <a asp-action="agregarcita" asp-controller="Home" class="btn btn-warning"> volver a la lista</a>
+            </form>
+
+        </div>
+    </div>
+
+
+    <br />
+
+
+    <br />
+    <br />
+    <br />
+    <br />
+</body>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />

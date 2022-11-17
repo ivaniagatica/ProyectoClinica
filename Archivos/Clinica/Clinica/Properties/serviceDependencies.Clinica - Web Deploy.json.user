@@ -1,0 +1,45 @@
+{
+  "dependencies": {
+    "mssql1": {
+      "restored": true,
+      "restoreTime": "2022-11-08T02:52:46.751363Z"
+    }
+  },
+  "parameters": {
+    "mssql1.subscriptionId": {
+      "Name": "mssql1.subscriptionId",
+      "Type": "subscription",
+      "Value": "54c3f81d-e01e-4c0d-925a-d4fa52586052"
+    },
+    "Clinica.subscriptionId": {
+      "Name": "Clinica.subscriptionId",
+      "Type": "subscription",
+      "Value": "54c3f81d-e01e-4c0d-925a-d4fa52586052"
+    },
+    "mssql1.resourceGroupName": {
+      "Name": "mssql1.resourceGroupName",
+      "Type": "resourceGroup",
+      "Value": "ClinicaBiodental"
+    },
+    "Clinica.resourceName": {
+      "Name": "Clinica.resourceName",
+      "Type": null,
+      "Value": "Clinica"
+    },
+    "Clinica.resourceGroupLocation": {
+      "Name": "Clinica.resourceGroupLocation",
+      "Type": null,
+      "Value": "centralus"
+    },
+    "Clinica.resourceGroupName": {
+      "Name": "Clinica.resourceGroupName",
+      "Type": "resourceGroup",
+      "Value": "ClinicaBiodental"
+    },
+    "subscriptionId": {
+      "Name": "subscriptionId",
+      "Type": "subscription",
+      "Value": "54c3f81d-e01e-4c0d-925a-d4fa52586052"
+    }
+  }
+}

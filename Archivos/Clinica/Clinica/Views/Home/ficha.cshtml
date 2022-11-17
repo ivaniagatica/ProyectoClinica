@@ -1,0 +1,59 @@
+﻿@model List<Ficha>
+@{
+    ViewData["Title"] = "ficha";
+}
+
+<h1>Ficha</h1>
+
+
+<body>
+    <div class="card">
+        <div clas="card-body">
+            <a asp-action="Guardarficha" asp-controller="Home" class="btn btn-success"> <i class="bi bi-plus-circle-fill"></i> Crear un Nuevo</a>
+            <hr />
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Apellido</th>
+                        <th>Nacimiento</th>
+                        <th>Edad</th>
+                        <th>DPI</th>
+                        <th>Direccion</th>
+                        <th>Genero</th>
+                        <th>Doctora</th>
+                        <th>Tratamiento</th>
+                        <th> </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var items in Model)
+                    {
+
+
+                        <tr>
+                            <td>@items.nombreficha</td>
+                            <td>@items.apellido</td>
+                            <td>@items.nacimiento</td>
+                            <td>@items.edad</td>
+                            <td>@items.dpi</td>
+                            <td>@items.direccion</td>
+                            <td>@items.genero</td>
+                            <td>@items.doctora</td>
+                            <td>@items.tratamiento</td>
+                            <td> <a asp-action="Editarficha" asp-controller="Home" class="btn btn-primary btn-sm" asp-route-Idficha="@items.Idficha"><i class="bi bi-pencil-square"></i> Actualizar </a> </td>
+                            <td> <a asp-action="Eliminarficha" asp-controller="Home" class="btn btn-danger btn-sm" asp-route-Idficha="@items.Idficha"> <i class="bi bi-trash3-fill"></i>Eliminar </a> </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</body>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+

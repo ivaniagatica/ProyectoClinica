@@ -1,0 +1,36 @@
+html {
+  font-size: 14px;
+
+}
+
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom:30px;
+
+}
+
+/*disenio*/
+
+.elementor-heading-title {
+    color: green;
+    font-weight: normal;
+}
+
+.elementor-privacy-title{
+    color:green;
+}
+
+.elementor-privacy-horario{
+    color:black;
+}
